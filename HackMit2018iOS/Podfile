@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'HackMit2018iOS' do
+  use_frameworks!
+
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+
+  # Pods for HackMit2018iOS
+
+  target 'HackMit2018iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'HackMit2018iOSUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

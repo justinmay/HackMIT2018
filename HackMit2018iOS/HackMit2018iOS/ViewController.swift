@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class ViewController: UIViewController {
     
@@ -14,9 +17,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var user: UILabel!
     @IBOutlet weak var pass: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    @IBOutlet weak var invalidLoginText: UILabel!
     
+    @IBAction func logInTouch(_ sender: Any) {
+        self.performSegue(withIdentifier: "homeLogIn", sender: self)
+        Auth.auth().signIn(withEmail: emailField.text!, password: passField.text!) { (user, error) in
+            if user != nil {
+                
+                self.performSegue(withIdentifier: "homeLogIn", sender: self)
+                UserDefaults.standard.setValue(true, forKey: "loggedIn")
+                UserDefaults.standard.setValue(self.emailField.text!, forKey: "email")
+                UserDefaults.standard.setValue(self.passField.text!, forKey: "password")
+                
+            } else {
+                print("bad login")
+                self.invalidLoginText.textColor = UIColor.white
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        invalidLoginText.textColor = UIColor.clear
+        
         // Do any additional setup after loading the view, typically from a nib.
         setUpViews()
     }
@@ -41,6 +68,8 @@ class ViewController: UIViewController {
         user.textColor = UIColor.white
         pass.textColor = UIColor.white
         titleLabel.textColor = UIColor.white
+        logInButton.setTitleColor(UIColor.white, for: .normal)
+        signInButton.setTitleColor(UIColor.white, for: UIControlState.normal)
     }
 }
 
