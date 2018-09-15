@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter, Route, Switch } from "react-router-dom";
+
+//COMPONENTS
+import HomePage from './components/HomePage'
+import LogInPage from './components/LogInPage';
+
 
 class App extends Component {
   render() {
     return (
     <div>
-    <h1>Natural Disaster Relief Center</h1>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+      <HashRouter>
+        <div>
+          <Route path='/' component={HomePage} />
+          <Route path='/login' component={LogInPage} />
+        </div>
+      </HashRouter>
     </div>
     );
   }
