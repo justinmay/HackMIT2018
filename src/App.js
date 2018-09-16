@@ -1,30 +1,26 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from "react-router-dom";
-import {user} from './firebase/auth'
-import * as firebase from 'firebase'
-import {withAuth} from 'fireview'
 
 //COMPONENTS
 import HomePage from './components/HomePage'
-import SignUp from "./components/SignUp"
+import LogInPage from './components/LogInPage'
+import error from './components/error';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
+    <div>
       <HashRouter>
         <div>
-
-          <Route exact path='/' render={(props) => <HomePage user={this.props._user}/>} />
-          <Route exact path='/signup' component={SignUp} />
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/login' component={LogInPage} />
 
         </div>
-    </HashRouter>
+      </HashRouter>
+    </div>
     );
   }
 }
 
-export default withAuth(App);
+export default App;
