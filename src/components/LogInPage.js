@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {createUser, logIn} from '../firebase/index.js'
+import {createUser, logIn} from '../firebase/auth'
 
 class LogInPage extends Component {
   constructor() {
@@ -17,13 +17,15 @@ class LogInPage extends Component {
       console.log(this.state)
     })
   }
-  handleSubmit = () => {
-    console.log("submit!")
+  handleSubmit = async () => {
+    await logIn(this.state.email, this.state.password);
+    this.props.history.push('/')
   }
+
   render() {
     return (
       <div>
-        <h3>Please Log In</h3>
+        <h3>Relief Institution Log In</h3>
         <div>
           <input name="email" type="text" placeholder="e-mail" onChange={this.handleChange} />
           <input name="password" type="text" placeholder="password..." onChange={this.handleChange} />
