@@ -4,6 +4,6 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import * as firebase from 'firebase'
-import {AuthProvider, withAuth} from 'fireview'
-ReactDOM.render(<AuthProvider auth={firebase.auth()}><App auth={firebase.auth()}/></AuthProvider>, document.getElementById('root'));
+import {AuthProvider} from 'fireview'
+ReactDOM.render(<AuthProvider auth={firebase.auth()}><App /></AuthProvider>, document.getElementById('root'));
 registerServiceWorker();

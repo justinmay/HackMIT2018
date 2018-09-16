@@ -1,21 +1,45 @@
 import React, {Component} from 'react'
-import LogInPage from "./LogInPage"
-import Map from "./Map"
 import {Link} from 'react-router-dom'
+import {  connect } from "react-redux"
+import LogInPage from "./LogInPage"
+import GoogleMap from "./map/GoogleMap"
+import firebase from 'firebase'
+/////
+import {getCenterThunk } from '../store/reliefCenterReducer'
 
-export default class HomePage extends Component {
-  constructor(props) {
-    super(props)
+class HomePage extends Component {
+  constructor() {
+    super() 
+    this.state = {
+      logIn: ""
+    }
   }
+  setTrue = () => {
+    this.setState({
+      logIn: true
+    })
+  }
+  setFalse = () => {
+    this.setState( {
+      login:false
+    })
+  }
+
   render() {
-    console.log(this.props)
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setTrue()
+      } else {
+        this.setFalse()
+      }
+    });
     return (
       <div>
       <h1>ResQ Emergency Relief Center</h1>
       <div>
-        <Map />
+        <GoogleMap />
       </div>
-        {(this.props.user)?(<h1>User Logged In!</h1>):(
+        {(this.state.logIn)?(<h1>User Logged In!</h1>):(
         <div>
           <LogInPage history={this.props.history}/>
           <p>Not registered with us? Register your relief center <Link to="/signup">here</Link>!</p>
@@ -24,3 +48,21 @@ export default class HomePage extends Component {
     )
   }
 }
+ 
+const mapState = (state) => {
+  return {
+    centers: state.relief
+  }
+}
+
+const mapDispatch = dispatch => {
+  return {
+    getCenter: async (email) => {
+      await dispatch(getCenterThunk(email))
+    }
+  }
+}
+
+const connectedHomePage = connect(mapState, mapDispatch)
+
+export default connectedHomePage(HomePage)
