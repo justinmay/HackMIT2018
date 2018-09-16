@@ -19,7 +19,6 @@ class LogInPage extends Component {
   }
   handleSubmit = async () => {
     await logIn(this.state.email, this.state.password);
-    this.props.history.push('/')
   }
 
   render() {
