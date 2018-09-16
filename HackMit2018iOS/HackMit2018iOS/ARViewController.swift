@@ -9,8 +9,11 @@
 import UIKit
 import SceneKit
 import ARKit
+import CoreLocation
+import Firebase
+import FirebaseDatabase
 
-class ARViewController: UIViewController, ARSCNViewDelegate  {
+class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate  {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var imageViewLeft: UIImageView!
@@ -18,10 +21,19 @@ class ARViewController: UIViewController, ARSCNViewDelegate  {
     @IBOutlet weak var sceneViewLeft: ARSCNView!
     @IBOutlet weak var sceneViewRight: ARSCNView!
     
+    //type passed from Control Center
+    var typePassed:String!
+    
     private var planeNode: SCNNode?
     private var imageNode: SCNNode?
     
     let eyeCamera : SCNCamera = SCNCamera()
+    
+    let locationManager = CLLocationManager()
+    
+    //LAT LANG
+    var lat = 0.0
+    var lang = 0.0
     
     // Parametres
     let interpupilaryDistance = 0.066 // This is the value for the distance between two pupils (in metres). The Interpupilary Distance (IPD).
@@ -35,9 +47,54 @@ class ARViewController: UIViewController, ARSCNViewDelegate  {
     //    let eyeFOV = 90; var cameraImageScale = 6; // (Scale: 6 ± 1.0) Very Rough Guestimate.
     //    let eyeFOV = 120; var cameraImageScale = 8.756; // Rough Guestimate.
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+        
+        // Run the view's session
+        sceneView.session.run(configuration)
+    }
+    
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Pause the view's session
+        sceneView.session.pause()
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Set Up
+        print(typePassed)
+        setUpARNode(whichNode: typePassed)
+        
+        //Firebase setup
+        let userID = Auth.auth().currentUser?.uid
+        var ref: DatabaseReference! = Database.database().reference()
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
         // Set the view's delegate
         sceneView.delegate = self
         // Show statistics such as fps and timing information
@@ -90,14 +147,72 @@ class ARViewController: UIViewController, ARSCNViewDelegate  {
         self.imageViewRight.contentMode = UIViewContentMode.center
         self.imageViewRight.transform = self.imageViewRight.transform.rotated(by: CGFloat(Double.pi/2))
         
-        if let cameraNode = self.sceneView.pointOfView {
-            
-            let distance: Float = 1.0 // Hardcoded depth
-        }
-        
     }
     
+    func setUpARNode(whichNode: String) {
+        switch whichNode{
+        case "food":
+            var foodRef = Database.database().reference().child("Locations").child("Food")
+            print("printing foods")
+            
+            foodRef.observeSingleEvent(of: .value) { snapshot in
+                print(snapshot.childrenCount) // I got the expected number of items
+                for case let rest as DataSnapshot in snapshot.children {
+                    print(rest.value)
+                }
+            }
+        case "water":
+            var foodRef = Database.database().reference().child("Locations").child("Water")
+            print("printing waters")
+            
+            foodRef.observeSingleEvent(of: .value) { snapshot in
+                print(snapshot.childrenCount) // I got the expected number of items
+                for case let rest as DataSnapshot in snapshot.children {
+                    print(rest.value)
+                }
+            }
+        case "hospital":
+            var foodRef = Database.database().reference().child("Locations").child("Hospital")
+            print("printing hospitals")
+        
+            foodRef.observeSingleEvent(of: .value) { snapshot in
+                print(snapshot.childrenCount) // I got the expected number of items
+                for case let rest as DataSnapshot in snapshot.children {
+                    print(rest.value)
+                }
+            }
+        case "gas":
+            var foodRef = Database.database().reference().child("Locations").child("Gas")
+            print("printing hospitals")
+            
+            foodRef.observeSingleEvent(of: .value) { snapshot in
+                print(snapshot.childrenCount) // I got the expected number of items
+                for case let rest as DataSnapshot in snapshot.children {
+                    print(rest.value)
+                }
+            }
+        case "shelter":
+            var foodRef = Database.database().reference().child("Locations").child("Shelter")
+            print("printing hospitals")
+            
+            foodRef.observeSingleEvent(of: .value) { snapshot in
+                print(snapshot.childrenCount) // I got the expected number of items
+                for case let rest as DataSnapshot in snapshot.children {
+                    print(rest.value)
+                }
+            }
+        default:
+            print("u done screwed")
+        }
+    }
     
+    //finding location
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        lat = locValue.latitude
+        lang = locValue.longitude
+    }
     
     //returns a SCNMatrix4 of the position
     func sceneSpacePosition(inFrontOf node: SCNNode, atDistance distance: Float) -> SCNVector3 {
@@ -126,39 +241,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate  {
             return (pos)
         }
         return (SCNVector3(0, 0, -1))
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-        
-        // Run the view's session
-        sceneView.session.run(configuration)
-    }
-    
-   
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-    
-    // MARK: - ARSCNViewDelegate
-    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        DispatchQueue.main.async {
-            self.updateFrame()
-        }
     }
     
     func updateFrame() {
@@ -237,8 +319,5 @@ class ARViewController: UIViewController, ARSCNViewDelegate  {
         UIGraphicsEndImageContext()
         return screenshotImage
     }
-    
-    
-    
 }
 

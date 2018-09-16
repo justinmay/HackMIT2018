@@ -218,6 +218,9 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="shelterButtonTouch:" destination="RBH-kV-EJo" eventType="touchUpInside" id="0p7-Ne-TEQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -242,6 +245,9 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="hospitalButtonTouch:" destination="RBH-kV-EJo" eventType="touchUpInside" id="NDS-9d-PRH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -268,6 +274,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="gasButtonTouch:" destination="RBH-kV-EJo" eventType="touchUpInside" id="eam-fl-W95"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -289,53 +298,17 @@
                                                 <rect key="frame" x="0.0" y="50" width="1280" height="61"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="ResQ Me ">
+                                                        <fragment content="ResQ Nav ">
                                                             <attributes>
                                                                 <font key="NSFont" size="36" name="AvenirNext-DemiBold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                    <tabStops>
-                                                                        <textTab alignment="left" location="28">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="56">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="84">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="112">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="140">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="168">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="196">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="224">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="252">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="280">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="308">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="336">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                    </tabStops>
-                                                                </paragraphStyle>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="x5b-IG-VON" kind="show" id="QP7-et-F3z"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -358,50 +331,14 @@
                                                                 <fragment content="Find Water">
                                                                     <attributes>
                                                                         <font key="NSFont" size="18" name="AvenirNext-Medium"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                            <tabStops>
-                                                                                <textTab alignment="left" location="28">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="56">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="84">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="112">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="140">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="168">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="196">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="224">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="252">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="280">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="308">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                                <textTab alignment="left" location="336">
-                                                                                    <options/>
-                                                                                </textTab>
-                                                                            </tabStops>
-                                                                        </paragraphStyle>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="waterButtonTouch:" destination="RBH-kV-EJo" eventType="touchUpInside" id="FkM-CY-Feq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -427,6 +364,9 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="foodButtonTouch:" destination="RBH-kV-EJo" eventType="touchUpInside" id="PSu-Fm-vDE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -434,15 +374,28 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMy-8B-9OF">
+                                <rect key="frame" x="300" y="592" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="77M-4O-CTT"/>
+                                    <constraint firstAttribute="width" constant="50" id="XGn-E7-rgt"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="bell"/>
+                                <connections>
+                                    <segue destination="oL0-wQ-2Md" kind="show" id="Kc1-Ss-v8P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5dq-kn-flb" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="594-we-DgQ"/>
                             <constraint firstItem="Y0w-wt-AlH" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="gNa-RU-gqm"/>
+                            <constraint firstAttribute="bottom" secondItem="xMy-8B-9OF" secondAttribute="bottom" constant="25" id="gpb-cI-CAT"/>
                             <constraint firstItem="TqN-eu-YMW" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="h3b-Cl-ehj"/>
                             <constraint firstItem="5dq-kn-flb" firstAttribute="top" secondItem="Y0w-wt-AlH" secondAttribute="bottom" constant="25" id="m1x-xn-rdf"/>
                             <constraint firstItem="Y0w-wt-AlH" firstAttribute="top" secondItem="TqN-eu-YMW" secondAttribute="bottom" constant="25" id="mJW-hE-caL"/>
                             <constraint firstItem="Y0w-wt-AlH" firstAttribute="centerY" secondItem="rgq-V7-RZa" secondAttribute="centerY" id="t7O-8b-OmX"/>
+                            <constraint firstAttribute="trailing" secondItem="xMy-8B-9OF" secondAttribute="trailing" constant="25" id="wiu-A9-gY2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HIg-hN-Myj"/>
                     </view>
@@ -454,11 +407,187 @@
                         <outlet property="resQbutton" destination="w5g-qQ-HX9" id="vKw-7X-sii"/>
                         <outlet property="shelterButton" destination="Uin-Hn-GdU" id="PUp-QQ-R0J"/>
                         <outlet property="waterButton" destination="cJo-tu-Uee" id="G9s-Ld-Rrv"/>
+                        <segue destination="yDF-zs-ZoT" kind="showDetail" identifier="VRsegue" id="axr-MW-Wek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDE-Dk-fpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1234" y="40"/>
+        </scene>
+        <!--ResQ View Controller-->
+        <scene sceneID="Ey0-ua-dx7">
+            <objects>
+                <viewController id="x5b-IG-VON" customClass="ResQViewController" customModule="HackMit2018iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kqy-7o-PEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEC-6D-6M2">
+                                <rect key="frame" x="89" y="50" width="196" height="49.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ResQ Status">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="AvenirNext-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-qQ-EOB">
+                                <rect key="frame" x="16.5" y="199.5" width="340.5" height="317"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnf-gi-4sG">
+                                        <rect key="frame" x="73.5" y="0.0" width="194" height="33"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Help is on its way! ">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="AvenirNext-UltraLight"/>
+                                                    <font key="NSOriginalFont" size="24" name="AvenirNext-UltraLight"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="C73-RB-zrl">
+                                        <rect key="frame" x="0.0" y="83" width="340.5" height="154"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="knt-aB-zTN">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="154"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH6-4Y-3RL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Status">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVv-CE-Wl6">
+                                                        <rect key="frame" x="0.0" y="43.5" width="85" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="ETA">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg4-TL-vM0">
+                                                        <rect key="frame" x="0.0" y="87" width="85" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Mode">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cz3-87-hvS">
+                                                        <rect key="frame" x="0.0" y="130.5" width="85" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Comments">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-Qe-y1S">
+                                                <rect key="frame" x="185" y="0.0" width="155.5" height="154"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-1O-5BS">
+                                                        <rect key="frame" x="87" y="0.0" width="68.5" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="In Transit">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbr-dR-wph">
+                                                        <rect key="frame" x="112" y="43.5" width="43.5" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="5 min">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6k-Iw-mJm">
+                                                        <rect key="frame" x="120" y="87" width="35.5" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Boat">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0q-ZX-iXf">
+                                                        <rect key="frame" x="0.0" y="130.5" width="155.5" height="23.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Please Wait Outside">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZU-Mq-nx1">
+                                        <rect key="frame" x="153.5" y="287" width="34" height="30"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RBH-kV-EJo" kind="show" id="aV7-bo-ieJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HEC-6D-6M2" firstAttribute="centerX" secondItem="kqy-7o-PEk" secondAttribute="centerX" id="2de-xf-988"/>
+                            <constraint firstItem="0Fb-qQ-EOB" firstAttribute="centerX" secondItem="kqy-7o-PEk" secondAttribute="centerX" id="Cgr-Ey-YDn"/>
+                            <constraint firstItem="HEC-6D-6M2" firstAttribute="top" secondItem="EcH-Em-IRf" secondAttribute="top" constant="30" id="Hs1-lu-VB8"/>
+                            <constraint firstItem="0Fb-qQ-EOB" firstAttribute="top" secondItem="HEC-6D-6M2" secondAttribute="bottom" constant="100" id="p8A-oN-ZdO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EcH-Em-IRf"/>
+                    </view>
+                    <connections>
+                        <outlet property="resQView" destination="kqy-7o-PEk" id="dEf-vT-CLC"/>
+                        <outlet property="titleLable" destination="HEC-6D-6M2" id="xkJ-Tq-9e6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Le-qf-BIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="788"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BBw-MP-icV">
@@ -541,7 +670,232 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJW-9C-5lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185" y="44"/>
+            <point key="canvasLocation" x="2084" y="34"/>
+        </scene>
+        <!--Add Event View Controller-->
+        <scene sceneID="H8h-kI-g92">
+            <objects>
+                <viewController id="oL0-wQ-2Md" customClass="AddEventViewController" customModule="HackMit2018iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3B-Hu-qoy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWw-ht-jWw">
+                                <rect key="frame" x="148" y="50" width="79" height="49.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Alert">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HUV-S0-fa4">
+                                <rect key="frame" x="12" y="199" width="350.5" height="418"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xb-XI-P0I">
+                                        <rect key="frame" x="70.5" y="0.0" width="209.5" height="33"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Authorities Alerted!">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="Avenir-Book"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="QSV-Or-UwC">
+                                        <rect key="frame" x="0.0" y="63" width="350.5" height="280"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Q6e-0Y-Rw3">
+                                                <rect key="frame" x="0.0" y="0.0" width="150.5" height="280"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2GR-D5-7qs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="60"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="UlL-Vm-hkc"/>
+                                                            <constraint firstAttribute="height" constant="60" id="oSQ-L9-ECf"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Power Outtage">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="touch4:" destination="oL0-wQ-2Md" eventType="touchUpInside" id="chq-Ys-qzH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OeW-gl-rm3">
+                                                        <rect key="frame" x="0.0" y="110" width="150.5" height="60"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="ELa-2e-9bI"/>
+                                                            <constraint firstAttribute="width" constant="150" id="rk9-d7-sLu"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Flooding">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="touch5:" destination="oL0-wQ-2Md" eventType="touchUpInside" id="BYB-WU-e2e"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-QO-iAz">
+                                                        <rect key="frame" x="0.0" y="220" width="150.5" height="60"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="7YV-J9-JiT"/>
+                                                            <constraint firstAttribute="width" constant="150" id="VME-ow-Bcy"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Pet Inside">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="touch6:" destination="oL0-wQ-2Md" eventType="touchUpInside" id="lro-ez-zfg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="izt-nb-RGO">
+                                                <rect key="frame" x="200.5" y="0.0" width="150" height="280"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8tU-zg-gqf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="09s-uK-11S"/>
+                                                            <constraint firstAttribute="width" constant="150" id="nwT-Ya-A3e"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Road Blocked">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="touch1:" destination="oL0-wQ-2Md" eventType="touchUpInside" id="foo-LX-CTt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp5-yf-RZR">
+                                                        <rect key="frame" x="0.0" y="110" width="150" height="60"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="Iw1-XF-Sx2"/>
+                                                            <constraint firstAttribute="width" constant="150" id="dz4-Xk-VBg"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Downed Tree">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="touch2:" destination="oL0-wQ-2Md" eventType="touchUpInside" id="FRe-at-LOP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfJ-41-AhR">
+                                                        <rect key="frame" x="0.0" y="220" width="150" height="60"/>
+                                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="5KX-jo-LfF"/>
+                                                            <constraint firstAttribute="width" constant="150" id="TD8-vD-Yik"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Vandalism">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="touch3:" destination="oL0-wQ-2Md" eventType="touchUpInside" id="Cqx-RA-L31"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4q-st-GEE">
+                                        <rect key="frame" x="149" y="373" width="53" height="45"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="24" name="AvenirNext-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RBH-kV-EJo" kind="show" id="cGO-Q4-I0S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HUV-S0-fa4" firstAttribute="centerX" secondItem="j3B-Hu-qoy" secondAttribute="centerX" id="5r1-xN-Gd8"/>
+                            <constraint firstItem="MWw-ht-jWw" firstAttribute="top" secondItem="Ber-Wq-FAg" secondAttribute="top" constant="30" id="oVl-1C-FsG"/>
+                            <constraint firstItem="MWw-ht-jWw" firstAttribute="centerX" secondItem="j3B-Hu-qoy" secondAttribute="centerX" id="wFV-h7-8KZ"/>
+                            <constraint firstItem="Ber-Wq-FAg" firstAttribute="bottom" secondItem="HUV-S0-fa4" secondAttribute="bottom" constant="50" id="xqo-Vg-trb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ber-Wq-FAg"/>
+                    </view>
+                    <connections>
+                        <outlet property="AddEventView" destination="j3B-Hu-qoy" id="UTB-iL-Mog"/>
+                        <outlet property="alertField" destination="MWw-ht-jWw" id="yNT-jI-eYQ"/>
+                        <outlet property="authalertfield" destination="2Xb-XI-P0I" id="hyo-24-4vX"/>
+                        <outlet property="floodingButton" destination="OeW-gl-rm3" id="q8f-fv-o4o"/>
+                        <outlet property="petButton" destination="z8c-QO-iAz" id="zdt-Cl-7Bl"/>
+                        <outlet property="powerButton" destination="2GR-D5-7qs" id="TdW-3x-5Qj"/>
+                        <outlet property="roadButton" destination="8tU-zg-gqf" id="etB-ZI-a8E"/>
+                        <outlet property="treeButton" destination="rp5-yf-RZR" id="p3a-Pg-oO2"/>
+                        <outlet property="vandalButton" destination="OfJ-41-AhR" id="npV-i1-K1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQC-Og-mjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="787.55622188905556"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="kUo-12-W8g">
@@ -681,6 +1035,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell" width="96" height="96"/>
         <image name="food" width="144" height="144"/>
         <image name="gas" width="144" height="144"/>
         <image name="home" width="144" height="144"/>
@@ -689,6 +1044,7 @@
         <image name="water" width="144" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gqu-RR-uA6"/>
+        <segue reference="Kc1-Ss-v8P"/>
+        <segue reference="cGO-Q4-I0S"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,10 @@ target 'HackMit2018iOS' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON'
+  pod 'AerisWeather'
+  pod 'AerisWeather/Maps' 
 
   # Pods for HackMit2018iOS
 

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12558F9FC443BAB42E2D85B8 /* Pods_HackMit2018iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A1A7141F65C87BB673AE18 /* Pods_HackMit2018iOSUITests.framework */; };
-		7C1465D0224ED3E160D8CAE6 /* Pods_HackMit2018iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BADC6772CD91CF5D5CFE6B7 /* Pods_HackMit2018iOSTests.framework */; };
+		0A0ACA96161BBFF366B3EB6C /* Pods_HackMit2018iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F956006421A5A9B87C0875 /* Pods_HackMit2018iOS.framework */; };
+		28F5594C866312AE5A4C6EBF /* Pods_HackMit2018iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649C2320889B277CD77F051A /* Pods_HackMit2018iOSTests.framework */; };
+		9EA4030D1A101CFFD23FE495 /* Pods_HackMit2018iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA76798D9C40D7F326A86C2 /* Pods_HackMit2018iOSUITests.framework */; };
+		CB279859214DAED400B5EC03 /* ResQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279858214DAED400B5EC03 /* ResQViewController.swift */; };
+		CB27985B214E3F8100B5EC03 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27985A214E3F8100B5EC03 /* AddEventViewController.swift */; };
 		CBFD9E7F214D611B0046A13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD9E7E214D611B0046A13A /* AppDelegate.swift */; };
 		CBFD9E81214D611B0046A13A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD9E80214D611B0046A13A /* ViewController.swift */; };
 		CBFD9E84214D611B0046A13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFD9E82214D611B0046A13A /* Main.storyboard */; };
@@ -20,7 +23,6 @@
 		CBFD9EAF214D7FD30046A13A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBFD9EAE214D7FD30046A13A /* GoogleService-Info.plist */; };
 		CBFD9EB1214D92380046A13A /* ControlCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD9EB0214D92380046A13A /* ControlCenterViewController.swift */; };
 		CBFD9EB3214D94D80046A13A /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD9EB2214D94D80046A13A /* ARViewController.swift */; };
-		FD505C0459C018CCFDDA0002 /* Pods_HackMit2018iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A37EC9FD253D925BD5E66A /* Pods_HackMit2018iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AFCBA74EE390F8E407F25E0 /* Pods-HackMit2018iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackMit2018iOSUITests/Pods-HackMit2018iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3BADC6772CD91CF5D5CFE6B7 /* Pods_HackMit2018iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackMit2018iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		59A37EC9FD253D925BD5E66A /* Pods_HackMit2018iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackMit2018iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		62955EC6CA689DBD8D304E44 /* Pods-HackMit2018iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackMit2018iOSTests/Pods-HackMit2018iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6515BE619A42893E11D1586F /* Pods-HackMit2018iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackMit2018iOSUITests/Pods-HackMit2018iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		82A1A7141F65C87BB673AE18 /* Pods_HackMit2018iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackMit2018iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91EC0F19813FF6969DF86CC6 /* Pods-HackMit2018iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS.release.xcconfig"; sourceTree = "<group>"; };
+		0FCEEAB62F4A8B5422053873 /* Pods-HackMit2018iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-HackMit2018iOSUITests/Pods-HackMit2018iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		29ED42BA3B199BD36382F4B4 /* Pods-HackMit2018iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOS.debug.xcconfig"; path = "Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		51485C9E0B56CD8FCFE71E41 /* Pods-HackMit2018iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSTests.release.xcconfig"; path = "Target Support Files/Pods-HackMit2018iOSTests/Pods-HackMit2018iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		63C3ECB59035B3466627B9B6 /* Pods-HackMit2018iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-HackMit2018iOSUITests/Pods-HackMit2018iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		63F956006421A5A9B87C0875 /* Pods_HackMit2018iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackMit2018iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		649C2320889B277CD77F051A /* Pods_HackMit2018iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackMit2018iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA76798D9C40D7F326A86C2 /* Pods_HackMit2018iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackMit2018iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC911D6894FB8BCE096006B7 /* Pods-HackMit2018iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOS.release.xcconfig"; path = "Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CB279858214DAED400B5EC03 /* ResQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResQViewController.swift; sourceTree = "<group>"; };
+		CB27985A214E3F8100B5EC03 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		CBFD9E7B214D611B0046A13A /* HackMit2018iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackMit2018iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFD9E7E214D611B0046A13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBFD9E80214D611B0046A13A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,8 +70,7 @@
 		CBFD9EAE214D7FD30046A13A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBFD9EB0214D92380046A13A /* ControlCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViewController.swift; sourceTree = "<group>"; };
 		CBFD9EB2214D94D80046A13A /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		EE4BC3EAB9698630F6885CEF /* Pods-HackMit2018iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F65668A14852E549A7C10A6B /* Pods-HackMit2018iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackMit2018iOSTests/Pods-HackMit2018iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB43BDD49F04C817E92488DD /* Pods-HackMit2018iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-HackMit2018iOSTests/Pods-HackMit2018iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD505C0459C018CCFDDA0002 /* Pods_HackMit2018iOS.framework in Frameworks */,
+				0A0ACA96161BBFF366B3EB6C /* Pods_HackMit2018iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C1465D0224ED3E160D8CAE6 /* Pods_HackMit2018iOSTests.framework in Frameworks */,
+				28F5594C866312AE5A4C6EBF /* Pods_HackMit2018iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,34 +94,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12558F9FC443BAB42E2D85B8 /* Pods_HackMit2018iOSUITests.framework in Frameworks */,
+				9EA4030D1A101CFFD23FE495 /* Pods_HackMit2018iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		387D987E27D7A2FD16ED7ABA /* Frameworks */ = {
+		14ABEBEE57887496C3D249D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59A37EC9FD253D925BD5E66A /* Pods_HackMit2018iOS.framework */,
-				3BADC6772CD91CF5D5CFE6B7 /* Pods_HackMit2018iOSTests.framework */,
-				82A1A7141F65C87BB673AE18 /* Pods_HackMit2018iOSUITests.framework */,
+				63F956006421A5A9B87C0875 /* Pods_HackMit2018iOS.framework */,
+				649C2320889B277CD77F051A /* Pods_HackMit2018iOSTests.framework */,
+				6BA76798D9C40D7F326A86C2 /* Pods_HackMit2018iOSUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3F3E32FF22E32FF3187F4EE7 /* Pods */ = {
+		5DB4BCD111EB23388D17AC06 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EE4BC3EAB9698630F6885CEF /* Pods-HackMit2018iOS.debug.xcconfig */,
-				91EC0F19813FF6969DF86CC6 /* Pods-HackMit2018iOS.release.xcconfig */,
-				62955EC6CA689DBD8D304E44 /* Pods-HackMit2018iOSTests.debug.xcconfig */,
-				F65668A14852E549A7C10A6B /* Pods-HackMit2018iOSTests.release.xcconfig */,
-				0AFCBA74EE390F8E407F25E0 /* Pods-HackMit2018iOSUITests.debug.xcconfig */,
-				6515BE619A42893E11D1586F /* Pods-HackMit2018iOSUITests.release.xcconfig */,
+				29ED42BA3B199BD36382F4B4 /* Pods-HackMit2018iOS.debug.xcconfig */,
+				AC911D6894FB8BCE096006B7 /* Pods-HackMit2018iOS.release.xcconfig */,
+				DB43BDD49F04C817E92488DD /* Pods-HackMit2018iOSTests.debug.xcconfig */,
+				51485C9E0B56CD8FCFE71E41 /* Pods-HackMit2018iOSTests.release.xcconfig */,
+				63C3ECB59035B3466627B9B6 /* Pods-HackMit2018iOSUITests.debug.xcconfig */,
+				0FCEEAB62F4A8B5422053873 /* Pods-HackMit2018iOSUITests.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		CBFD9E72214D611A0046A13A = {
@@ -127,8 +132,8 @@
 				CBFD9E92214D611D0046A13A /* HackMit2018iOSTests */,
 				CBFD9E9D214D611D0046A13A /* HackMit2018iOSUITests */,
 				CBFD9E7C214D611B0046A13A /* Products */,
-				3F3E32FF22E32FF3187F4EE7 /* Pods */,
-				387D987E27D7A2FD16ED7ABA /* Frameworks */,
+				5DB4BCD111EB23388D17AC06 /* Pods */,
+				14ABEBEE57887496C3D249D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +155,8 @@
 				CBFD9EAC214D6B820046A13A /* LogInViewController.swift */,
 				CBFD9EB0214D92380046A13A /* ControlCenterViewController.swift */,
 				CBFD9EB2214D94D80046A13A /* ARViewController.swift */,
+				CB279858214DAED400B5EC03 /* ResQViewController.swift */,
+				CB27985A214E3F8100B5EC03 /* AddEventViewController.swift */,
 				CBFD9E82214D611B0046A13A /* Main.storyboard */,
 				CBFD9E85214D611D0046A13A /* Assets.xcassets */,
 				CBFD9E87214D611D0046A13A /* LaunchScreen.storyboard */,
@@ -184,11 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBFD9EA3214D611D0046A13A /* Build configuration list for PBXNativeTarget "HackMit2018iOS" */;
 			buildPhases = (
-				E208A51CD5228FB14F13AD92 /* [CP] Check Pods Manifest.lock */,
+				6511653CFCEB7E87388E761B /* [CP] Check Pods Manifest.lock */,
 				CBFD9E77214D611A0046A13A /* Sources */,
 				CBFD9E78214D611A0046A13A /* Frameworks */,
 				CBFD9E79214D611A0046A13A /* Resources */,
-				5DA545ECFEC82E7A67DBE040 /* [CP] Embed Pods Frameworks */,
+				9B09AB5403DED26CDC8E11EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,7 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBFD9EA6214D611D0046A13A /* Build configuration list for PBXNativeTarget "HackMit2018iOSTests" */;
 			buildPhases = (
-				2F5AEC352A6280FB8B138C01 /* [CP] Check Pods Manifest.lock */,
+				A3BC6D7BD5FD53FD0422EC29 /* [CP] Check Pods Manifest.lock */,
 				CBFD9E8B214D611D0046A13A /* Sources */,
 				CBFD9E8C214D611D0046A13A /* Frameworks */,
 				CBFD9E8D214D611D0046A13A /* Resources */,
@@ -222,7 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBFD9EA9214D611D0046A13A /* Build configuration list for PBXNativeTarget "HackMit2018iOSUITests" */;
 			buildPhases = (
-				32045E84365EDC96E9C84A0E /* [CP] Check Pods Manifest.lock */,
+				13D1F68EC2EC185BCC88316A /* [CP] Check Pods Manifest.lock */,
 				CBFD9E96214D611D0046A13A /* Sources */,
 				CBFD9E97214D611D0046A13A /* Frameworks */,
 				CBFD9E98214D611D0046A13A /* Resources */,
@@ -309,34 +316,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F5AEC352A6280FB8B138C01 /* [CP] Check Pods Manifest.lock */ = {
+		13D1F68EC2EC185BCC88316A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOSTests-checkManifestLockResult.txt",
+			outputFileListPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		32045E84365EDC96E9C84A0E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOSUITests-checkManifestLockResult.txt",
 			);
@@ -345,13 +338,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5DA545ECFEC82E7A67DBE040 /* [CP] Embed Pods Frameworks */ = {
+		6511653CFCEB7E87388E761B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS-frameworks.sh",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B09AB5403DED26CDC8E11EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS-frameworks.sh",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCore.framework",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCore.framework.dSYM",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCoreUI.framework",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCoreUI.framework.dSYM",
+				"${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework",
+				"${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework.dSYM",
+				"${PODS_ROOT}/AerisWeather/lib/AerisMapKit.framework",
+				"${PODS_ROOT}/AerisWeather/lib/AerisMapKit.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -361,11 +387,23 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisCore.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AerisCore.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisCoreUI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AerisCoreUI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisWeatherKit.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AerisWeatherKit.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisMapKit.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AerisMapKit.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -375,26 +413,31 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E208A51CD5228FB14F13AD92 /* [CP] Check Pods Manifest.lock */ = {
+		A3BC6D7BD5FD53FD0422EC29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,8 +452,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBFD9E81214D611B0046A13A /* ViewController.swift in Sources */,
+				CB279859214DAED400B5EC03 /* ResQViewController.swift in Sources */,
 				CBFD9E7F214D611B0046A13A /* AppDelegate.swift in Sources */,
 				CBFD9EAD214D6B820046A13A /* LogInViewController.swift in Sources */,
+				CB27985B214E3F8100B5EC03 /* AddEventViewController.swift in Sources */,
 				CBFD9EB1214D92380046A13A /* ControlCenterViewController.swift in Sources */,
 				CBFD9EB3214D94D80046A13A /* ARViewController.swift in Sources */,
 			);
@@ -583,7 +628,7 @@
 		};
 		CBFD9EA4214D611D0046A13A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE4BC3EAB9698630F6885CEF /* Pods-HackMit2018iOS.debug.xcconfig */;
+			baseConfigurationReference = 29ED42BA3B199BD36382F4B4 /* Pods-HackMit2018iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,7 +647,7 @@
 		};
 		CBFD9EA5214D611D0046A13A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91EC0F19813FF6969DF86CC6 /* Pods-HackMit2018iOS.release.xcconfig */;
+			baseConfigurationReference = AC911D6894FB8BCE096006B7 /* Pods-HackMit2018iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -621,7 +666,7 @@
 		};
 		CBFD9EA7214D611D0046A13A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62955EC6CA689DBD8D304E44 /* Pods-HackMit2018iOSTests.debug.xcconfig */;
+			baseConfigurationReference = DB43BDD49F04C817E92488DD /* Pods-HackMit2018iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -643,7 +688,7 @@
 		};
 		CBFD9EA8214D611D0046A13A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F65668A14852E549A7C10A6B /* Pods-HackMit2018iOSTests.release.xcconfig */;
+			baseConfigurationReference = 51485C9E0B56CD8FCFE71E41 /* Pods-HackMit2018iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -665,7 +710,7 @@
 		};
 		CBFD9EAA214D611D0046A13A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AFCBA74EE390F8E407F25E0 /* Pods-HackMit2018iOSUITests.debug.xcconfig */;
+			baseConfigurationReference = 63C3ECB59035B3466627B9B6 /* Pods-HackMit2018iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -686,7 +731,7 @@
 		};
 		CBFD9EAB214D611D0046A13A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6515BE619A42893E11D1586F /* Pods-HackMit2018iOSUITests.release.xcconfig */;
+			baseConfigurationReference = 0FCEEAB62F4A8B5422053873 /* Pods-HackMit2018iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
