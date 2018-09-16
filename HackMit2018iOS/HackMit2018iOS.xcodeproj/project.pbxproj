@@ -12,6 +12,8 @@
 		9EA4030D1A101CFFD23FE495 /* Pods_HackMit2018iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA76798D9C40D7F326A86C2 /* Pods_HackMit2018iOSUITests.framework */; };
 		CB279859214DAED400B5EC03 /* ResQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279858214DAED400B5EC03 /* ResQViewController.swift */; };
 		CB27985B214E3F8100B5EC03 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27985A214E3F8100B5EC03 /* AddEventViewController.swift */; };
+		CB27985D214E4DB300B5EC03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27985C214E4DB300B5EC03 /* MapViewController.swift */; };
+		CB27985F214E9B1700B5EC03 /* AROneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27985E214E9B1700B5EC03 /* AROneViewController.swift */; };
 		CBFD9E7F214D611B0046A13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD9E7E214D611B0046A13A /* AppDelegate.swift */; };
 		CBFD9E81214D611B0046A13A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD9E80214D611B0046A13A /* ViewController.swift */; };
 		CBFD9E84214D611B0046A13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFD9E82214D611B0046A13A /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		AC911D6894FB8BCE096006B7 /* Pods-HackMit2018iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackMit2018iOS.release.xcconfig"; path = "Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB279858214DAED400B5EC03 /* ResQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResQViewController.swift; sourceTree = "<group>"; };
 		CB27985A214E3F8100B5EC03 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		CB27985C214E4DB300B5EC03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CB27985E214E9B1700B5EC03 /* AROneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AROneViewController.swift; sourceTree = "<group>"; };
 		CBFD9E7B214D611B0046A13A /* HackMit2018iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackMit2018iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFD9E7E214D611B0046A13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBFD9E80214D611B0046A13A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +125,6 @@
 				63C3ECB59035B3466627B9B6 /* Pods-HackMit2018iOSUITests.debug.xcconfig */,
 				0FCEEAB62F4A8B5422053873 /* Pods-HackMit2018iOSUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,6 +160,8 @@
 				CBFD9EB2214D94D80046A13A /* ARViewController.swift */,
 				CB279858214DAED400B5EC03 /* ResQViewController.swift */,
 				CB27985A214E3F8100B5EC03 /* AddEventViewController.swift */,
+				CB27985C214E4DB300B5EC03 /* MapViewController.swift */,
+				CB27985E214E9B1700B5EC03 /* AROneViewController.swift */,
 				CBFD9E82214D611B0046A13A /* Main.storyboard */,
 				CBFD9E85214D611D0046A13A /* Assets.xcassets */,
 				CBFD9E87214D611D0046A13A /* LaunchScreen.storyboard */,
@@ -321,15 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOSUITests-checkManifestLockResult.txt",
 			);
@@ -343,15 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOS-checkManifestLockResult.txt",
 			);
@@ -364,8 +361,6 @@
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HackMit2018iOS/Pods-HackMit2018iOS-frameworks.sh",
@@ -386,14 +381,12 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisCore.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/AerisCore.framework.dSYM",
@@ -412,7 +405,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -427,15 +420,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HackMit2018iOSTests-checkManifestLockResult.txt",
 			);
@@ -453,11 +442,13 @@
 			files = (
 				CBFD9E81214D611B0046A13A /* ViewController.swift in Sources */,
 				CB279859214DAED400B5EC03 /* ResQViewController.swift in Sources */,
+				CB27985F214E9B1700B5EC03 /* AROneViewController.swift in Sources */,
 				CBFD9E7F214D611B0046A13A /* AppDelegate.swift in Sources */,
 				CBFD9EAD214D6B820046A13A /* LogInViewController.swift in Sources */,
 				CB27985B214E3F8100B5EC03 /* AddEventViewController.swift in Sources */,
 				CBFD9EB1214D92380046A13A /* ControlCenterViewController.swift in Sources */,
 				CBFD9EB3214D94D80046A13A /* ARViewController.swift in Sources */,
+				CB27985D214E4DB300B5EC03 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

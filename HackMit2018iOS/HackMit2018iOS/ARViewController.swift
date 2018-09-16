@@ -24,16 +24,23 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     //type passed from Control Center
     var typePassed:String!
     
+    var timer = Timer()
+    
     private var planeNode: SCNNode?
     private var imageNode: SCNNode?
     
+    let pointOfView : SCNNode = SCNNode()
     let eyeCamera : SCNCamera = SCNCamera()
+    var targetLocation = CGPoint(x: 0, y: 0)
     
     let locationManager = CLLocationManager()
     
     //LAT LANG
     var lat = 0.0
     var lang = 0.0
+    
+    //label CGPOINT
+    var resourceLocation = CGPoint(x: 0, y: 0)
     
     // Parametres
     let interpupilaryDistance = 0.066 // This is the value for the distance between two pupils (in metres). The Interpupilary Distance (IPD).
@@ -143,26 +150,65 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         self.imageViewLeft.clipsToBounds = true
         self.imageViewLeft.contentMode = UIViewContentMode.center
         self.imageViewLeft.transform = self.imageViewLeft.transform.rotated(by: CGFloat(Double.pi/2))
+        
         self.imageViewRight.clipsToBounds = true
         self.imageViewRight.contentMode = UIViewContentMode.center
         self.imageViewRight.transform = self.imageViewRight.transform.rotated(by: CGFloat(Double.pi/2))
+        print("///")
+        print(targetLocation)
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(almostSetUp), userInfo: nil, repeats: false)
+    }
+    
+    @objc func almostSetUp() {
+        self.targetLocation = targetPosition(userLocation:CGPoint(x: lat, y: lang),resourceCenter: resourceLocation, scaleFactor: 1)
+        let skScene = SKScene(size: CGSize(width: 200, height: 200))
+        skScene.backgroundColor = UIColor.clear
         
+        let rectangle = SKShapeNode(rect: CGRect(x: 0, y: 0, width: 200, height: 200), cornerRadius: 10)
+        rectangle.fillColor = #colorLiteral(red: 0.807843148708344, green: 0.0274509806185961, blue: 0.333333343267441, alpha: 1.0)
+        rectangle.strokeColor = #colorLiteral(red: 0.439215689897537, green: 0.0117647061124444, blue: 0.192156866192818, alpha: 1.0)
+        rectangle.lineWidth = 5
+        rectangle.alpha = 0.4
+        let labelNode = SKLabelNode(text: "Hello World")
+        labelNode.fontSize = 20
+        labelNode.position = CGPoint(x:100,y:100)
+        skScene.addChild(rectangle)
+        skScene.addChild(labelNode)
+        let plane = SCNPlane(width: 20, height: 20)
+        let material = SCNMaterial()
+        material.isDoubleSided = true
+        material.diffuse.contents = skScene
+        plane.materials = [material]
+        let node = SCNNode(geometry: plane)
+        node.position = SCNVector3(targetLocation.x,1.5,targetLocation.y)
+        print(node.position)
+        self.sceneView.scene.rootNode.addChildNode(node)
+        
+    }
+    
+    func targetPosition(userLocation: CGPoint, resourceCenter: CGPoint, scaleFactor: Int) -> CGPoint{
+        let xDist = resourceCenter.x - userLocation.x
+        let yDist = resourceCenter.y - userLocation.y
+        let dist = sqrt(xDist * xDist + yDist * yDist)
+        let unitVector: [Double] = [Double(xDist / dist), Double(yDist / dist)]
+        return CGPoint(x: 5 * unitVector[0], y: unitVector[1])
     }
     
     func setUpARNode(whichNode: String) {
         switch whichNode{
         case "food":
-            var foodRef = Database.database().reference().child("Locations").child("Food")
+            let foodRef = Database.database().reference().child("Locations").child("Food")
             print("printing foods")
             
             foodRef.observeSingleEvent(of: .value) { snapshot in
                 print(snapshot.childrenCount) // I got the expected number of items
                 for case let rest as DataSnapshot in snapshot.children {
-                    print(rest.value)
+                    print(rest.value!)
+                    self.resourceLocation = CGPointFromString(rest.value! as! String)
                 }
             }
         case "water":
-            var foodRef = Database.database().reference().child("Locations").child("Water")
+            let foodRef = Database.database().reference().child("Locations").child("Water")
             print("printing waters")
             
             foodRef.observeSingleEvent(of: .value) { snapshot in
@@ -172,7 +218,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                 }
             }
         case "hospital":
-            var foodRef = Database.database().reference().child("Locations").child("Hospital")
+            let foodRef = Database.database().reference().child("Locations").child("Hospital")
             print("printing hospitals")
         
             foodRef.observeSingleEvent(of: .value) { snapshot in
@@ -182,7 +228,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                 }
             }
         case "gas":
-            var foodRef = Database.database().reference().child("Locations").child("Gas")
+            let foodRef = Database.database().reference().child("Locations").child("Gas")
             print("printing hospitals")
             
             foodRef.observeSingleEvent(of: .value) { snapshot in
@@ -192,7 +238,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                 }
             }
         case "shelter":
-            var foodRef = Database.database().reference().child("Locations").child("Shelter")
+            let foodRef = Database.database().reference().child("Locations").child("Shelter")
             print("printing hospitals")
             
             foodRef.observeSingleEvent(of: .value) { snapshot in
@@ -207,7 +253,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     }
     
     //finding location
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         lat = locValue.latitude
@@ -246,7 +292,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     func updateFrame() {
         /////////////////////////////////////////////
         // CREATE POINT OF VIEWS
-        let pointOfView : SCNNode = SCNNode()
+        
         pointOfView.transform = (sceneView.pointOfView?.transform)!
         pointOfView.scale = (sceneView.pointOfView?.scale)!
         // Create POV from Camera

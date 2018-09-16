@@ -184,13 +184,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Y0w-wt-AlH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewj-l8-Ski">
                                 <rect key="frame" x="127" y="273" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="3Tl-EP-DNH"/>
-                                    <constraint firstAttribute="width" constant="120" id="Sob-AU-GtH"/>
+                                    <constraint firstAttribute="width" constant="120" id="100-15-xfS"/>
+                                    <constraint firstAttribute="height" constant="120" id="cTU-pU-Czy"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" title="Button" image="logo"/>
+                                <connections>
+                                    <segue destination="hsI-LS-VaA" kind="show" id="ou0-wg-bUB"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-kn-flb" userLabel="bottom view">
                                 <rect key="frame" x="-6.5" y="418" width="388" height="198"/>
                                 <subviews>
@@ -385,17 +389,25 @@
                                     <segue destination="oL0-wQ-2Md" kind="show" id="Kc1-Ss-v8P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTc-mW-XI0">
+                                <rect key="frame" x="166" y="626.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ewj-l8-Ski" firstAttribute="centerY" secondItem="rgq-V7-RZa" secondAttribute="centerY" id="1BV-Xv-Jqp"/>
+                            <constraint firstItem="Ewj-l8-Ski" firstAttribute="top" secondItem="TqN-eu-YMW" secondAttribute="bottom" constant="25" id="26d-HJ-Pfd"/>
                             <constraint firstItem="5dq-kn-flb" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="594-we-DgQ"/>
-                            <constraint firstItem="Y0w-wt-AlH" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="gNa-RU-gqm"/>
+                            <constraint firstItem="dTc-mW-XI0" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="cQr-TB-Ic1"/>
+                            <constraint firstItem="Ewj-l8-Ski" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="ewT-YM-Y2K"/>
                             <constraint firstAttribute="bottom" secondItem="xMy-8B-9OF" secondAttribute="bottom" constant="25" id="gpb-cI-CAT"/>
                             <constraint firstItem="TqN-eu-YMW" firstAttribute="centerX" secondItem="rgq-V7-RZa" secondAttribute="centerX" id="h3b-Cl-ehj"/>
-                            <constraint firstItem="5dq-kn-flb" firstAttribute="top" secondItem="Y0w-wt-AlH" secondAttribute="bottom" constant="25" id="m1x-xn-rdf"/>
-                            <constraint firstItem="Y0w-wt-AlH" firstAttribute="top" secondItem="TqN-eu-YMW" secondAttribute="bottom" constant="25" id="mJW-hE-caL"/>
-                            <constraint firstItem="Y0w-wt-AlH" firstAttribute="centerY" secondItem="rgq-V7-RZa" secondAttribute="centerY" id="t7O-8b-OmX"/>
+                            <constraint firstItem="HIg-hN-Myj" firstAttribute="bottom" secondItem="dTc-mW-XI0" secondAttribute="bottom" constant="20" id="r1R-23-Tcf"/>
                             <constraint firstAttribute="trailing" secondItem="xMy-8B-9OF" secondAttribute="trailing" constant="25" id="wiu-A9-gY2"/>
+                            <constraint firstItem="5dq-kn-flb" firstAttribute="top" secondItem="Ewj-l8-Ski" secondAttribute="bottom" constant="25" id="z33-2P-6uJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HIg-hN-Myj"/>
                     </view>
@@ -403,11 +415,13 @@
                         <outlet property="controlCenterView" destination="rgq-V7-RZa" id="KfN-Ok-ncP"/>
                         <outlet property="foodButton" destination="m7f-ft-tAr" id="l9E-Pl-E1S"/>
                         <outlet property="gasButton" destination="TqU-NV-E8L" id="8ZO-x7-grY"/>
+                        <outlet property="hiddenAlertText" destination="dTc-mW-XI0" id="BOX-u7-seb"/>
                         <outlet property="hosptitalButton" destination="hi5-9o-K3Q" id="xU1-MB-jz5"/>
                         <outlet property="resQbutton" destination="w5g-qQ-HX9" id="vKw-7X-sii"/>
                         <outlet property="shelterButton" destination="Uin-Hn-GdU" id="PUp-QQ-R0J"/>
                         <outlet property="waterButton" destination="cJo-tu-Uee" id="G9s-Ld-Rrv"/>
                         <segue destination="yDF-zs-ZoT" kind="showDetail" identifier="VRsegue" id="axr-MW-Wek"/>
+                        <segue destination="OoX-kl-mDv" kind="show" identifier="finalSegue" id="2x1-jg-D80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDE-Dk-fpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,6 +686,39 @@
             </objects>
             <point key="canvasLocation" x="2084" y="34"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Q0Z-N3-kVm">
+            <objects>
+                <viewController id="hsI-LS-VaA" customClass="MapViewController" customModule="HackMit2018iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pUl-h6-Zms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Urx-XW-H8K">
+                                <rect key="frame" x="320" y="616" width="32" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Avenir-Book"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="RBH-kV-EJo" kind="show" id="zl2-hV-sZh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RDa-KF-o7y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOf-uu-1Ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876" y="34"/>
+        </scene>
         <!--Add Event View Controller-->
         <scene sceneID="H8h-kI-g92">
             <objects>
@@ -897,6 +944,32 @@
             </objects>
             <point key="canvasLocation" x="2084" y="787.55622188905556"/>
         </scene>
+        <!--One View Controller-->
+        <scene sceneID="TNf-Il-s2W">
+            <objects>
+                <viewController id="OoX-kl-mDv" customClass="AROneViewController" customModule="HackMit2018iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irX-bw-E2G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3f-re-e1x">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X3f-re-e1x" firstAttribute="leading" secondItem="atw-Vh-oSh" secondAttribute="leading" id="9ed-q7-JZR"/>
+                            <constraint firstItem="atw-Vh-oSh" firstAttribute="trailing" secondItem="X3f-re-e1x" secondAttribute="trailing" id="QuN-eI-0Nb"/>
+                            <constraint firstItem="X3f-re-e1x" firstAttribute="top" secondItem="irX-bw-E2G" secondAttribute="top" id="bBe-Xb-bfe"/>
+                            <constraint firstItem="atw-Vh-oSh" firstAttribute="bottom" secondItem="X3f-re-e1x" secondAttribute="bottom" id="vAv-lh-Gno"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="atw-Vh-oSh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XnJ-Bj-d1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902" y="805"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="kUo-12-W8g">
             <objects>
@@ -1044,7 +1117,6 @@
         <image name="water" width="144" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kc1-Ss-v8P"/>
-        <segue reference="cGO-Q4-I0S"/>
+        <segue reference="zl2-hV-sZh"/>
     </inferredMetricsTieBreakers>
 </document>

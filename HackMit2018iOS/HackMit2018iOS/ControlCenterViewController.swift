@@ -22,6 +22,7 @@ class ControlCenterViewController: UIViewController {
     @IBOutlet weak var hosptitalButton: UIButton!
     @IBOutlet weak var shelterButton: UIButton!
     @IBOutlet weak var gasButton: UIButton!
+    @IBOutlet weak var hiddenAlertText: UILabel!
     
     var type:String = ""
     override func prepare (for segue: UIStoryboardSegue, sender: Any!) {
@@ -56,7 +57,7 @@ class ControlCenterViewController: UIViewController {
     
     @IBAction func shelterButtonTouch(_ sender: Any) {
         type = "shelter"
-        self.performSegue(withIdentifier: "VRsegue", sender: nil)
+        self.performSegue(withIdentifier: "finalSegue", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -65,6 +66,7 @@ class ControlCenterViewController: UIViewController {
         setUpViews()
         //getWeather()
         getAPIWeather()
+        hiddenAlertText.textColor = UIColor.clear
 
         // Do any additional setup after loading the view.
     }
@@ -108,7 +110,30 @@ class ControlCenterViewController: UIViewController {
             "Accept-Encoding": "gzip",
             "accept": "application/json"
         ]
-        
+        Alamofire.request(url, parameters: parameters)
+            .responseJSON { response in
+                print(response)
+                //to get status code
+                if let status = response.response?.statusCode {
+                    switch(status){
+                    case 201:
+                        print("example success")
+                    default:
+                        print("error with response status: \(status)")
+                    }
+                }
+                //to get JSON return value
+                if let result = response.result.value {
+                    let JSON = result as! NSDictionary
+                    if let alert = JSON["alerts"] as? [[String:Any]],
+                        let codes = alert.first {
+                        self.hiddenAlertText.text = codes["headlineText"]! as! String
+                        self.hiddenAlertText.textColor = UIColor.white
+                        print(codes["headlineText"]!) // the value is an optional.
+                    }
+                }
+                
+        }
     }
     
     func convertToDictionary(text: String) -> [String: Any]? {
