@@ -9,6 +9,7 @@ var config = {
   storageBucket: "hackmit2018-b67a1.appspot.com",
   messagingSenderId: "567774515333"
   };
+
 firebase.initializeApp(config);
 
 
