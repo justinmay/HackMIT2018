@@ -3,7 +3,8 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 
 //COMPONENTS
 import HomePage from './components/HomePage'
-import LogInPage from './components/LogInPage';
+import LogInPage from './components/LogInPage'
+import error from './components/error';
 
 
 class App extends Component {
@@ -12,8 +13,9 @@ class App extends Component {
     <div>
       <HashRouter>
         <div>
-          <Route path='/' component={HomePage} />
-          <Route path='/login' component={LogInPage} />
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/login' component={LogInPage} />
+
         </div>
       </HashRouter>
     </div>
