@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import LogInPage from "./LogInPage"
+import Map from "./Map"
 import {Link} from 'react-router-dom'
 
 export default class HomePage extends Component {
@@ -11,6 +12,9 @@ export default class HomePage extends Component {
     return (
       <div>
       <h1>ResQ Emergency Relief Center</h1>
+      <div>
+        <Map />
+      </div>
         {(this.props.user)?(<h1>User Logged In!</h1>):(
         <div>
           <LogInPage history={this.props.history}/>
