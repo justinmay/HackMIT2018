@@ -1,5 +1,8 @@
 import { auth } from "./firebase"
 
+//Log in state
+export const user = auth.currentUser;
+
 //Sign Up
 export const createUser = async (email, password) => {
   try {
