@@ -8,6 +8,7 @@ import {withAuth} from 'fireview'
 import HomePage from './components/HomePage'
 import SignUp from "./components/SignUp"
 
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -16,8 +17,10 @@ class App extends Component {
     return (
       <HashRouter>
         <div>
+
           <Route exact path='/' render={(props) => <HomePage user={this.props._user}/>} />
           <Route exact path='/signup' component={SignUp} />
+
         </div>
     </HashRouter>
     );
